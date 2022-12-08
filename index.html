@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academlo Store</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+  <div id="loader" class="loader">
+    <svg class="loader-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+      <title>Academlo Logo</title>
+      <g>
+          <g>
+              <path
+              d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+              </path>
+              <path
+              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+              </path>
+          </g>
+      </g>
+  </svg>
+  </div>
+  <header id="header">
+  <nav class="navbar container">
+    <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+      <title>Academlo Logo</title>
+      <g>
+        <g>
+          <path
+            d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+          </path>
+        </g>
+      </g>
+  </svg>
+  <div class="nav_menu hide" id="nav-menu">
+    <ul class="nav_list">
+      <li class="nav_item">
+        <a href="#" class="nav_link red">Home</a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">Productos</a>
+      </li>
+    </ul>
+    <div id="nav-close" class="nav-close">
+      <i class="bx bx-x bx-md"></i>
+    </div>
+  </div>
+  <div class="icons-wrapper">
+    <i class='bx bx-moon bx-sm' id="theme-btn"></i>
+    <div class="cart-shop" id="cart-btn">
+      <i class='bx bx-shopping-bag bx-sm' ></i>
+      <span class="cart-counter" id="cart-counter">0</span>
+    </div>
+    <div class="nav_men">
+      <i class='bx bx-grid-alt bx-sm' id="menu-btn"></i>
+    </div>
+  </div>
+  </nav>
+</header>
+  <div class="cart-container hide" id="cart-container">
+    <div class="cart" id="cart">
+      <div class="cart-close" id="close-cart">
+        <i class='bx bx-x bx-md'></i>
+      </div>
+      <h2 class="carro_tittle">Mi Carrito</h2>
+      <div id="cart-content">
+        <!-- Contenido del Carrito-->
+
+      </div>
+      <div class="cart_prices">
+        <span class="cart_prices-item">
+          <span id="items-count">0</span>
+          <font style="vertical-align: inherit;">artículos</font>
+        </span>
+        <span id="cart-total" class="cart_prices-total">$0.00</span>
+      </div>
+      <div class="cart_checkout">
+        <button id="cart-checkout" class="button cart_btn" disabled>
+          <i class="bx bxs-check-shield">Verificar</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <main class="main">
+    <section id="home" class="home">
+      <div class="home_container container grid">
+        <div class="home_img">
+          <img class="img_t" src="assets/images/home.png" alt="">
+        </div>
+        <div class="home_content">
+          <h1 class="home_title">
+            <font style="vertical-align: inherit;">Sudadera nueva</font>
+            <br>
+            <font style="vertical-align: inherit;">COLECCIONES 2022</font>
+          </h1>
+          <p class="home_description">
+            <font style="vertical-align: inherit;">
+              Última llegada de la nueva sudadera Hanes Midweight Crewneck importada de la serie 2022, con un moderno diseño.
+            </font>
+          </p>
+          <span class="home_price">
+            <font style="vertical-align: inherit;">$14.00</font>
+          </span>
+          <div class="home-btns">
+            <a href="#" class="btn_Des">
+              <font style="vertical-align: inherit;">Descubrir</font>
+            </a>
+            <button class="btn_Aña">
+              <font style="vertical-align: inherit;">AÑADIR AL CARRITO</font>
+            </button>
+          </div>
+        </div>
+      </div>  
+    </section>
+    <section id="products" class="products">
+      <div class="products_container container">
+        <ul class="products_filter">
+          <li class="products_item linea">
+            <h3 class="product_title">
+              <font style="vertical-align: inherit;">Mostrar todo</font>
+            </h3>
+            <span class="product_stock">
+              <font style="vertical-align: inherit;">mostrar todos los productos</font>
+            </span>
+          </li>
+          <li class="products_item linea">
+            <h3 class="product_title">
+              <font style="vertical-align: inherit;">Sudaderas con capucha</font>
+            </h3>
+            <span class="product_stock">
+              <font style="vertical-align: inherit;">3 productos</font>
+            </span>
+          </li>
+          <li class="products_item linea">
+            <h3 class="product_title">
+              <font style="vertical-align: inherit;">Camisas</font>
+            </h3>
+            <span class="product_stock">
+              <font style="vertical-align: inherit;">4 productos</font>
+            </span>
+          </li>
+          <li class="products_item linea">
+            <h3 class="product_title">
+              <font style="vertical-align: inherit;">Sudaderas</font>
+            </h3>
+            <span class="product_stock">
+              <font style="vertical-align: inherit;">4 productos</font>
+            </span>
+          </li>
+        </ul>
+        <div id="products_content" class="products_content grid">
+          <article class="products_card">
+            <div class="products_shape">
+              <img class="pro_img" src="assets/images/featured1.png" alt="">
+            </div>
+            <div class="products_data">
+              <h2 class="products_price">
+                <font style="vertical-align: inherit;">$14,00</font>
+                <span class="products_quantity">
+                  <font style="vertical-align: inherit;">| Existencias: 10</font>
+                </span>
+              </h2>
+              <h3 class="products_name">
+                <font style="vertical-align: inherit;">Sudaderas con capucha</font>
+              </h3>
+              <button class="btn_products">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+          <article class="products_card">
+            <div class="products_shape">
+              <img class="pro_img" src="assets/images/featured2.png" alt="">
+            </div>
+            <div class="products_data">
+              <h2 class="products_price">
+                <font style="vertical-align: inherit;">$24,00</font>
+                <span class="products_quantity">
+                  <font style="vertical-align: inherit;">| Existencias: 15</font>
+                </span>
+              </h2>
+              <h3 class="products_name">
+                <font style="vertical-align: inherit;">Camisas</font>
+              </h3>
+              <button class="btn_products">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+          <article class="products_card">
+            <div class="products_shape">
+              <img class="pro_img" src="assets/images/featured3.png" alt="sudadera">
+            </div>
+            <div class="products_data">
+              <h2 class="products_price">
+                <font style="vertical-align: inherit;">$24,00</font>
+                <span class="products_quantity">
+                  <font style="vertical-align: inherit;">| Existencias: 20</font>
+                </span>
+              </h2>
+              <h3 class="products_name">
+                <font style="vertical-align: inherit;">Sudaderas</font>
+              </h3>
+              <button class="btn_products">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer_section">
+    <div class="footer_container">
+      <div class="footer_content">
+        <h3 class="footer_title">
+          <font style="vertical-align: inherit;">Nuestra Información</font>
+        </h3>
+        <ul class="footer_list">
+          <li>
+            <font style="vertical-align: inherit;">Toluca Mexico</font>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_content">
+        <h3 class="footer_title">
+          <font style="vertical-align: inherit;">Sobre Nosotros</font>
+        </h3>
+        <ul class="footer_links">
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Centro de Apoyo</font>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Atención al cliente</font>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Sobre nosotros</font>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Copiar a la derecha</font>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_content">
+        <h3 class="footer_title">
+          <font style="vertical-align: inherit;">Producto</font>
+        </h3>
+        <ul class="footer_links">
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Sudaderas con capucha</font>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Camisas</font>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer_link">
+              <font style="vertical-align: inherit;">Sudaderas</font>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_content">
+        <h3 class="footer_title">
+          <font style="vertical-align: inherit;">Social</font>
+        </h3>
+        <ul class="footer_social">
+          <a href="#" class="footer_social_link" target="_blank">
+            <i class='bx bxl-facebook'></i>
+          </a>
+          <a href="#" class="footer_social_link" target="_blank">
+            <i class='bx bxl-twitter'></i>
+          </a>
+          <a href="#" class="footer_social_link" target="_blank">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <span class="footer-abajo">
+      <font style="vertical-align: inherit;">@ Andree. Todos los derechos reservados</font>
+    </span>
+  </footer>
+
+    <!--========== Logo Academlo con contorno ==========-->
+   <!--  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+        <title>Academlo Logo</title>
+        <g>
+            <g>
+                <path
+                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                </path>
+                <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                </path>
+            </g>
+        </g>
+    </svg> -->
+    
+
+    <!--=========== Logo Academlo sin contorno ==========-->
+    
+  
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

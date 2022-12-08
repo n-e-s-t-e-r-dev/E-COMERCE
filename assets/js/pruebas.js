@@ -41,3 +41,4 @@ function getQuantityByID (cartProducts, ID) {
 }
 
 console.log(cartProducts,)
+

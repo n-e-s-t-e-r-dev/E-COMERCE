@@ -28,7 +28,7 @@ const items = [
   function navMenu(){
 
   }
-  
+  /*Sytles importS */
   const themeBtn = document.getElementById('theme-btn')
   const body = document.body
   const cartBtnOpen = document.getElementById("cart-btn")
@@ -37,6 +37,16 @@ const items = [
   const cartOpenMenu = document.getElementById("menu-btn")
   const cartCloseMenu = document.getElementById("nav-close")
   const cartNavMenu = document.getElementById("nav-menu")
+
+/*iMPOIRT Funcionalidades */
+const content = document.getElementById("cart-content")
+const btn1 = document.getElementById("1")
+const btn2 = document.getElementById("2")
+const btn3 = document.getElementById("3")
+
+
+
+
   //Modo Noche 
   const number = (value) =>{
     return new Intl.NumberFormat('en-US', {
@@ -67,7 +77,7 @@ cartCloseMenu.addEventListener("click", ()=> cartNavMenu.classList.add("hide"))
 cartBtnOpen.addEventListener("click", ()=> cartContainer.classList.remove("hide"))
 cartBtnClose.addEventListener("click", ()=> cartContainer.classList.add("hide"))
 
-const cartProducts = [
+const cartProducts = [/*
   {
     id: 1,
     name: 'Hoodies',
@@ -95,27 +105,28 @@ const cartProducts = [
     quantity: 20,
     quantitySelected: 0
   }
+  */
 ]
+
+
 function addProduct(itemId){
   let ProductoSelected = cartProducts.find(product => product.id === itemId)
-  for(i = 1; i = cartProducts.id.length; i++)
+  
   if (ProductoSelected) {
-    if (cartProducts.id === quantitySelected[10]){
-      return "el producto esta agotado"
-    }
+   
     // Condicion al stock
     let index = cartProducts.indexOf(ProductoSelected)
     cartProducts[index].quantitySelected++
   } else {
     const item = items.find(item => item.id === itemId)
-    ProductoSelected.quantitySelected = 1
+    item.quantitySelected = 1
     cartProducts.push(item)
   }
   showProducts()
 }
 
 function showProducts(){
-  const content = document.getElementById("cart-content")
+  
   let fragment =""
   cartProducts.forEach(product => {
     fragment += `
@@ -131,11 +142,11 @@ function showProducts(){
         </span>
         <div class="cart_amount">
             <div class="cart_amount-content">
-                <span class="cart_amount-box minus" data-id="${product.id}">
+                <span class="cart_amount-box minus" data-id="${product.id}" onclick="addProduct(${product.id})">
                     <i class="bx bx-minus"></i>
                 </span>
                 <span class="cart_amount-number">${product.quantitySelected} units</span>
-                <span class="cart_amount-box plus" data-id="${product.id}">
+                <span class="cart_amount-box plus" data-id="${product.id}" onclick="addProduct(${product.id})">
                     <i class="bx bx-plus"></i>
                 </span>
             </div>
@@ -164,6 +175,24 @@ const load = () => {
     console.log('Ya pasaron 3s')
   }, 3500)
 }
+
+
+
+
+btn1.addEventListener("click", ()=>{
+  addProduct(1)
+})
+
+btn2.addEventListener("click", ()=>{
+  addProduct(2)
+})
+
+btn3.addEventListener("click", ()=>{
+  addProduct(3)
+})
+
+
+console.log(cartProducts);
 
 document.addEventListener('DOMContentLoaded', ( ) =>{ 
   load()
